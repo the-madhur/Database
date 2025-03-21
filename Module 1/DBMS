@@ -1,0 +1,23 @@
+DBMS - Database Management System
+
+A Database Management System (DBMS) helps in managing databases efficiently by providing a structured way to store, retrieve, update, and process data.
+
+Why Use DBMS?
+
+A DBMS helps identify use cases where databases are needed.
+It acts as a layer between applications and the database, allowing smooth interaction.
+It enables users to query, update, and process data efficiently.
+
+Main Goal of DBMS
+The primary goal of a DBMS is to ensure smooth retrieval and storage of data, making data management efficient, secure, and scalable.
+
+How DBMS Works?
+
+Acts as an interface between applications and the stored database.
+Handles operations like:
+Adding new data
+Updating existing data
+Removing unnecessary data
+Processing data for queries and transactions
+
+By using a DBMS, organizations can manage data more effectively and reduce complexities associated with file-based systems.

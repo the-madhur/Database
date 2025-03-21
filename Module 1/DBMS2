@@ -1,0 +1,19 @@
+DBMS Software
+
+There are various Database Management System (DBMS) software available that help in managing and manipulating data efficiently. Some commonly used DBMS software include:
+
+MySQL
+PostgreSQL (PgSQL)
+Oracle SQL
+SQLite
+
+These DBMS software allow users to add, delete, update, and retrieve stored data efficiently.
+
+Common Language - SQL
+ All DBMS software understand a common language called SQL (Structured Query Language).
+
+Role of SQL in DBMS
+
+ 1. A DBMS interacts with the stored database to manage data.
+ 2. To communicate with the DBMS, we use SQL, which acts as a programming language for databases.
+ 3. Each DBMS may have slight variations in SQL syntax, but the core language remains the same across all.

@@ -1,0 +1,29 @@
+File-Based System (Traditional Data Storage)
+
+ In earlier times, data was stored using a File-Based System, such as:
+
+ Excel
+ Word Documents (DOCX)
+ Text Files
+
+Problems with the File-Based System:
+
+ Data Redundancy – The same data is stored multiple times, leading to unnecessary duplication.
+ Data Inconsistency – Updates in one file may not reflect in others, causing mismatched information.
+ Difficult Data Access – Retrieving specific data is time-consuming and inefficient.
+ Security Issues – Controlling access to sensitive data is challenging.
+
+Introduction of Databases
+
+ To overcome these limitations, Databases were introduced.
+
+What is a Database?
+ A Database is a collection of related data that is systematically stored and managed.
+
+Advantages of Using a Database:
+
+ Reduces Data Redundancy – Data is stored only once and can be referenced multiple times.
+ Ensures Data Consistency – Updates are made in one place, preventing mismatched information.
+ Enables Easy Data Access – Structured query languages (SQL) make retrieving data faster and more efficient.
+ Enhances Security – Provides authentication and authorization to protect sensitive data.
+ Facilitates Application Integration – Databases can easily integrate with various applications and software.

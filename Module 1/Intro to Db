@@ -1,0 +1,17 @@
+In old time data can be store using File Based System 
+       For Ex- Excel , Word Docx etc 
+       Problems 
+       1. Data Redundancy
+       2. Data Inconsistency
+       3. Difficult Data Access
+       4. Security
+
+Database introduced so it can solves all the problems that can comes in File Based System 
+
+Database - It is a collection of related data.
+           It helps to solve the problem of Data Redundancy and Data Inconsistency.
+           (Store the data once and we can use it anywhere that we want)
+
+           It also helps to easy Apps Integration
+           Easy data Access
+           Provides Security

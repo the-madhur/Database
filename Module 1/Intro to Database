@@ -6,7 +6,7 @@ File-Based System (Traditional Data Storage)
  Word Documents (DOCX)
  Text Files
 
-Problems with the File-Based System:
+Problems with the File-Based System: 
 
  Data Redundancy – The same data is stored multiple times, leading to unnecessary duplication.
  Data Inconsistency – Updates in one file may not reflect in others, causing mismatched information.

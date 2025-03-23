@@ -9,6 +9,7 @@ It acts as a layer between applications and the database, allowing smooth intera
 It enables users to query, update, and process data efficiently.
 
 Main Goal of DBMS
+
 The primary goal of a DBMS is to ensure smooth retrieval and storage of data, making data management efficient, secure, and scalable.
 
 How DBMS Works?

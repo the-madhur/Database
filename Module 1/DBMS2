@@ -9,7 +9,7 @@ SQLite
 
 These DBMS software allow users to add, delete, update, and retrieve stored data efficiently.
 
-Common Language - SQL
+Common Language -  SQL
  All DBMS software understand a common language called SQL (Structured Query Language).
 
 Role of SQL in DBMS

@@ -65,16 +65,12 @@ SELECT * FROM Movies WHERE Name = "Thor";
 Fetches movies where the Name is "Thor".
 
 6. Deleting Data
-sql
-Copy
-Edit
+
 DELETE FROM Movies WHERE Name = "Thor";
 Deletes all rows where Name = "Thor".
 
 7. Updating Data
-sql
-Copy
-Edit
+
 UPDATE Movies SET Rating = 2 WHERE Name = "Thor the dark world";
 Changes the rating of "Thor the dark world" to 2.
 

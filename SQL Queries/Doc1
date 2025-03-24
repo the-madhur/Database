@@ -118,17 +118,13 @@ SELECT * FROM Movies WHERE Name = "Thor";
 USE movies;
 Error:
 
-pgsql
-Copy
-Edit
+
 ERROR 1049 (42000): Unknown database 'movies'
 Fix:
 
 "movies" is a table, not a database. Use:
 
-sql
-Copy
-Edit
+
 USE FILMSDATABASE;
 Final Output After All Queries
 After running all queries, the Movies table contains:

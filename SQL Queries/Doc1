@@ -74,9 +74,7 @@ Deletes all rows where Name = "Thor".
 UPDATE Movies SET Rating = 2 WHERE Name = "Thor the dark world";
 Changes the rating of "Thor the dark world" to 2.
 
-sql
-Copy
-Edit
+
 UPDATE Movies SET Rating = 3 WHERE Name = "Thor the dark world";
 Updates the rating back to 3.
 

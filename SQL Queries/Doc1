@@ -111,9 +111,7 @@ Fix:
 
 Strings must be enclosed in quotes:
 
-sql
-Copy
-Edit
+
 SELECT * FROM Movies WHERE Name = "Thor";
 3. Trying to Use a Table as a Database
 sql

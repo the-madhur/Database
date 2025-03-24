@@ -51,9 +51,7 @@ Inserts multiple rows at once.
 SELECT * FROM Movies;
 Fetches all records from the Movies table.
 
-sql
-Copy
-Edit
+
 SELECT * FROM Movies WHERE Rating = 4;
 Retrieves movies with a rating of 4.
 

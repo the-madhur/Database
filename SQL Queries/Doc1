@@ -47,9 +47,7 @@ VALUES ("Thor", 5), ("Iron Man", 5), ("Avengers", 4), ("Thor the dark world", 3)
 Inserts multiple rows at once.
 
 5. Retrieving Data
-sql
-Copy
-Edit
+
 SELECT * FROM Movies;
 Fetches all records from the Movies table.
 

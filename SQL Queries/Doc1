@@ -55,7 +55,7 @@ Fetches all records from the Movies table.
 SELECT * FROM Movies WHERE Rating = 4;
 Retrieves movies with a rating of 4.
 
-sql
+
 
 SELECT * FROM Movies WHERE Rating = 4 OR Rating < 4;
 Retrieves movies with a rating of 4 or lower.

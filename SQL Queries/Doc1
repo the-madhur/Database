@@ -114,9 +114,7 @@ Strings must be enclosed in quotes:
 
 SELECT * FROM Movies WHERE Name = "Thor";
 3. Trying to Use a Table as a Database
-sql
-Copy
-Edit
+
 USE movies;
 Error:
 

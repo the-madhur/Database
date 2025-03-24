@@ -29,7 +29,7 @@ This repository contains SQL queries and concepts that I have explored while lea
 To use the SQL queries from this repository:
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/database-learning.git
+   git clone [https://github.com/your-username/database-learning.git](https://github.com/the-madhur/Database)
    ```
 2. Open a database management tool like MySQL, PostgreSQL, or SQLite.
 3. Run the SQL scripts available in the `SQL-Scripts` folder.

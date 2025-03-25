@@ -1,0 +1,88 @@
+MySQL Queries Explained (FILMSDATABASE Example)
+1. Creating a Database
+
+CREATE DATABASE FILMSDATABASE;
+Creates a new database named FILMSDATABASE.
+
+A database is a collection of tables where data is stored.
+
+
+SHOW DATABASES;
+Displays a list of all available databases in MySQL.
+
+2. Selecting a Database
+
+USE FILMSDATABASE;
+Switches to FILMSDATABASE, so all subsequent queries apply to this database.
+
+3. Creating a Table
+
+CREATE TABLE Movies (Name VARCHAR(50), Rating INTEGER);
+Creates a Movies table with:
+
+Name → Stores movie names (up to 50 characters).
+
+Rating → Stores an integer value for the movie rating.
+
+
+SHOW TABLES;
+Lists all tables in the FILMSDATABASE database.
+
+
+DESC Movies;
+Displays the structure of the Movies table, showing column names, data types, and constraints.
+
+4. Inserting Data
+
+INSERT INTO Movies (Name, Rating) VALUES ("Thor", 5);
+Adds a new row with:
+
+Name: "Thor"
+
+Rating: 5
+
+
+INSERT INTO Movies (Name, Rating) 
+VALUES ("Thor", 5), ("Iron Man", 5), ("Avengers", 4), ("Thor the dark world", 3);
+Inserts multiple rows at once.
+
+5. Retrieving Data
+
+SELECT * FROM Movies;
+Fetches all records from the Movies table.
+
+
+SELECT * FROM Movies WHERE Rating = 4;
+Retrieves movies with a rating of 4.
+
+
+
+SELECT * FROM Movies WHERE Rating = 4 OR Rating < 4;
+Retrieves movies with a rating of 4 or lower.
+
+
+SELECT * FROM Movies WHERE Name = "Thor";
+Fetches movies where the Name is "Thor".
+
+6. Deleting Data
+
+DELETE FROM Movies WHERE Name = "Thor";
+Deletes all rows where Name = "Thor".
+
+7. Updating Data
+
+UPDATE Movies SET Rating = 2 WHERE Name = "Thor the dark world";
+Changes the rating of "Thor the dark world" to 2.
+
+
+UPDATE Movies SET Rating = 3 WHERE Name = "Thor the dark world";
+Updates the rating back to 3.
+
+8. Final Table After All Queries
+After running all queries, the Movies table contains:
+
+Name	Rating
+Iron Man	5
+Avengers	4
+Thor the dark world	3
+Thor Ragnarok	5

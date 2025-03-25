@@ -32,9 +32,9 @@ Chris Evans
 Chris Hemsworth
 
 4. Another example of LIMIT with OFFSET
-Query:
+Query: SELECT * FROM actors LIMIT 3 OFFSET 3;
 
-SELECT * FROM actors LIMIT 3 OFFSET 3;
+
 
 Explanation:
 OFFSET 3 skips the first 3 records.

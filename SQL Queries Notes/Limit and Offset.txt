@@ -30,6 +30,7 @@ Chris Evans
 Chris Hemsworth
 
 4. Another example of LIMIT with OFFSET
+
 Query: SELECT * FROM actors LIMIT 3 OFFSET 3;
 
 Explanation:

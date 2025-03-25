@@ -1,0 +1,109 @@
+Understanding SQL Queries in MySQL
+1. Retrieving All Data from a Table
+Query:
+sql
+Copy
+Edit
+SELECT * FROM actors;
+Explanation:
+This retrieves all records from the actors table.
+
+The table contains 5 rows with columns: Firstname, Lastname, Gender, and Netsworth.
+
+2. Using LIMIT to Restrict Rows
+Query:
+sql
+Copy
+Edit
+SELECT * FROM actors LIMIT 2;
+Explanation:
+The LIMIT 2 clause ensures that only the first 2 rows are returned.
+
+Output:
+
+Johnny Depp
+
+Scarlett Johnson
+
+3. Using LIMIT with OFFSET to Skip Rows
+Query:
+sql
+Copy
+Edit
+SELECT * FROM actors LIMIT 2 OFFSET 2;
+Explanation:
+OFFSET 2 skips the first 2 rows.
+
+LIMIT 2 retrieves the next 2 rows.
+
+Output:
+
+Chris Evans
+
+Chris Hemsworth
+
+Another Example
+sql
+Copy
+Edit
+SELECT * FROM actors LIMIT 3 OFFSET 3;
+OFFSET 3 skips 3 rows.
+
+LIMIT 3 fetches the next 3 rows, but only 2 rows remain.
+
+Output:
+
+Chris Hemsworth
+
+Robert Downey Jr.
+
+4. Using Aliases for Column Names
+Query:
+sql
+Copy
+Edit
+SELECT firstname AS first, lastname AS last FROM actors;
+Explanation:
+AS is used to rename columns in the result.
+
+firstname becomes first and lastname becomes last.
+
+Output:
+
+first: Johnny, last: Depp
+
+first: Scarlett, last: Johnson
+
+first: Chris, last: Evans
+
+first: Chris, last: Hemsworth
+
+first: Robert, last: Downey Jr.
+
+5. Viewing All Tables in a Database
+Query:
+sql
+Copy
+Edit
+SHOW TABLES;
+Explanation:
+This command lists all tables inside the selected database.
+
+Output:
+
+The database contains one table: actors.
+
+6. Summary Table of LIMIT and OFFSET
+Query	Skips (Offset)	Fetches (Limit)	Returned Rows
+LIMIT 2	0	2	First 2 rows
+LIMIT 2 OFFSET 1	1	2	Rows 2 & 3
+LIMIT 2 OFFSET 2	2	2	Rows 3 & 4
+LIMIT 2 OFFSET 3	3	2	Rows 4 & 5
+LIMIT 3 OFFSET 1	1	3	Rows 2, 3 & 4
+LIMIT 3 OFFSET 2	2	3	Rows 3, 4 & 5
+7. Why Use LIMIT and OFFSET?
+Efficient Data Retrieval: Useful when working with large datasets.
+
+Pagination: Helps when displaying results page by page.
+
+Performance Optimization: Reduces load on the database.

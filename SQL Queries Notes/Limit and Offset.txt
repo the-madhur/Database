@@ -35,7 +35,6 @@ Query: SELECT * FROM actors LIMIT 3 OFFSET 3;
 
 Explanation:
 OFFSET 3 skips the first 3 records.
-
 LIMIT 3 retrieves the next 3 records, but since there are only 2 records left, it returns:
 
 Chris Hemsworth

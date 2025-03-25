@@ -23,9 +23,7 @@ Scarlett Johnson
 
 3. Using LIMIT with OFFSET to Skip Rows
 Query:
-sql
-Copy
-Edit
+
 SELECT * FROM actors LIMIT 2 OFFSET 2;
 Explanation:
 OFFSET 2 skips the first 2 rows.
@@ -39,9 +37,7 @@ Chris Evans
 Chris Hemsworth
 
 Another Example
-sql
-Copy
-Edit
+
 SELECT * FROM actors LIMIT 3 OFFSET 3;
 OFFSET 3 skips 3 rows.
 
@@ -55,9 +51,7 @@ Robert Downey Jr.
 
 4. Using Aliases for Column Names
 Query:
-sql
-Copy
-Edit
+
 SELECT firstname AS first, lastname AS last FROM actors;
 Explanation:
 AS is used to rename columns in the result.
@@ -78,9 +72,7 @@ first: Robert, last: Downey Jr.
 
 5. Viewing All Tables in a Database
 Query:
-sql
-Copy
-Edit
+
 SHOW TABLES;
 Explanation:
 This command lists all tables inside the selected database.

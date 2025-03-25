@@ -23,7 +23,6 @@ Query: SELECT * FROM actors LIMIT 2 OFFSET 2;
 
 Explanation:
 OFFSET 2 skips the first 2 records.
-
 LIMIT 2 retrieves the next 2 records.
 
 Output:

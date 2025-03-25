@@ -1,9 +1,7 @@
 Understanding SQL Queries in MySQL
 1. Retrieving All Data from a Table
 Query:
-sql
-Copy
-Edit
+
 SELECT * FROM actors;
 Explanation:
 This retrieves all records from the actors table.
@@ -12,9 +10,7 @@ The table contains 5 rows with columns: Firstname, Lastname, Gender, and Netswor
 
 2. Using LIMIT to Restrict Rows
 Query:
-sql
-Copy
-Edit
+
 SELECT * FROM actors LIMIT 2;
 Explanation:
 The LIMIT 2 clause ensures that only the first 2 rows are returned.

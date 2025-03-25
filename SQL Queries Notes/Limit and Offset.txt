@@ -3,7 +3,6 @@ Understanding LIMIT and OFFSET in MySQL
 1. Basic SELECT * FROM actors;
 
 This retrieves all rows from the actors table.
-
 The output shows 5 records.
 
 2. Using LIMIT

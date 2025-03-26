@@ -1,0 +1,273 @@
+# Joins Basics in MySQL
+
+Joins are used in SQL to retrieve data from multiple tables based on related columns. This guide provides basic examples of **JOINs** using `Users` and `City` tables.
+
+## **1. Creating the `City` Table**
+
+```sql
+
+CREATE TABLE City (
+    City_id INT NOT NULL PRIMARY KEY,
+    City_Name VARCHAR(50),
+    City_Desc VARCHAR(200)
+);
+
+```
+
+- Creates a `City` table with:
+    - `City_id`: Integer, Primary Key (Unique, Non-Null)
+    - `City_Name`: String (Max 50 characters)
+    - `City_Desc`: String (Max 200 characters)
+
+---
+
+## **2. Verifying Table Creation**
+
+```sql
+
+SHOW TABLES;
+
+```
+
+- Lists all tables in the database.
+- Output confirms that `city` table is created.
+
+---
+
+## **3. Creating the `Users` Table**
+
+```sql
+
+CREATE TABLE users (
+    user_id INT NOT NULL PRIMARY KEY,
+    user_Name VARCHAR(50),
+    AGE INT,
+    DOB DATE,
+    City_id INT,
+    FOREIGN KEY (City_id) REFERENCES City(City_id) ON DELETE SET NULL
+);
+
+```
+
+- Creates a `users` table with:
+    - `user_id`: Integer, Primary Key
+    - `user_Name`: String (Max 50 characters)
+    - `AGE`: Integer (Age of user)
+    - `DOB`: Date of Birth
+    - `City_id`: Integer, Foreign Key referencing `City(City_id)`
+- **ON DELETE SET NULL**: If a city is deleted, `City_id` in `users` becomes `NULL`.
+
+---
+
+## **4. Inserting Data into `City` Table**
+
+```sql
+
+INSERT INTO city (City_id, City_name, City_desc)
+VALUES
+(4001, "Jhansi", "Maharani Laxmi Bai City"),
+(5031, "Jaipur", "Pink City"),
+(7801, "Delhi", "Capital City"),
+(6701, "Indore", "Food City");
+
+```
+
+- Adds four cities.
+
+**Verifying Data:**
+
+```sql
+
+SELECT * FROM city;
+
+```
+
+- Displays all cities in the `city` table.
+
+---
+
+## **5. Inserting Data into `Users` Table**
+
+```sql
+
+INSERT INTO users (user_id, user_name, Age, DOB, city_id)
+VALUES
+(1, "Madhur", 20, '2004-07-11', 4001),
+(2, "Anant", 22, '2001-09-01', 4001),
+(3, "Ayush", 22, '2002-11-10', 6701),
+(4, "Suyash", 24, '2001-09-22', 7801);
+
+```
+
+- Adds four users.
+
+**Verifying Data:**
+
+```sql
+
+SELECT * FROM users;
+
+```
+
+- Displays all users in the `users` table.
+
+---
+
+## **6. Performing a Join Query**
+
+```sql
+
+SELECT user_name, age, dob, city.city_name
+FROM users
+JOIN city ON users.city_id = city.city_id;
+
+```
+
+- Retrieves `user_name`, `age`, `dob`, and `city_name` by joining `users` and `city` tables.
+
+**Output:**
+
+| user_name | age | dob | city_name |
+| --- | --- | --- | --- |
+| Madhur | 20 | 2004-07-11 | Jhansi |
+| Anant | 22 | 2001-09-01 | Jhansi |
+| Ayush | 22 | 2002-11-10 | Indore |
+| Suyash | 24 | 2001-09-22 | Delhi |
+
+---
+
+## **7. Filtering Users from a Specific City**
+
+```sql
+
+SELECT user_Name, age, dob, city_name
+FROM users
+JOIN city ON users.city_id = city.city_id
+WHERE city.city_name = "Jhansi";
+
+```
+
+- Retrieves users who belong to `Jhansi`.
+
+**Output:**
+
+| user_name | age | dob | city_name |
+| --- | --- | --- | --- |
+| Madhur | 20 | 2004-07-11 | Jhansi |
+| Anant | 22 | 2001-09-01 | Jhansi |
+
+---
+
+## **8. Filtering Users of a Specific Age**
+
+```sql
+
+SELECT user_Name, age, dob, city_name
+FROM users
+JOIN city ON users.city_id = city.city_id
+WHERE users.age = 22;
+
+```
+
+- Retrieves users aged **22**.
+
+**Output:**
+
+| user_name | age | dob | city_name |
+| --- | --- | --- | --- |
+| Anant | 22 | 2001-09-01 | Jhansi |
+| Ayush | 22 | 2002-11-10 | Indore |
+
+---
+
+## **9. Sorting Users by Age**
+
+```sql
+
+SELECT user_Name, age, dob, city_name
+FROM users
+JOIN city ON users.city_id = city.city_id
+ORDER BY age;
+
+```
+
+- Sorts users in ascending order of age.
+
+---
+
+## **10. Limiting the Result Set**
+
+```sql
+
+SELECT user_Name, age, dob, city_name
+FROM users
+JOIN city ON users.city_id = city.city_id
+LIMIT 2;
+
+```
+
+- Fetches the first **2 rows**.
+
+**Output:**
+
+| user_name | age | dob | city_name |
+| --- | --- | --- | --- |
+| Madhur | 20 | 2004-07-11 | Jhansi |
+| Anant | 22 | 2001-09-01 | Jhansi |
+
+---
+
+## **11. Using `LIMIT` with `OFFSET`**
+
+```sql
+
+SELECT user_Name, age, dob, city_name
+FROM users
+JOIN city ON users.city_id = city.city_id
+LIMIT 2 OFFSET 2;
+
+```
+
+- Skips the first 2 rows and returns the next **2 rows**.
+
+**Output:**
+
+| user_name | age | dob | city_name |
+| --- | --- | --- | --- |
+| Ayush | 22 | 2002-11-10 | Indore |
+| Suyash | 24 | 2001-09-22 | Delhi |
+
+---
+
+## **12. Counting Users in Each City**
+
+```sql
+
+SELECT city.city_name, COUNT(users.user_id) AS total_users
+FROM users
+JOIN city ON users.city_id = city.city_id
+GROUP BY city.city_name;
+
+```
+
+- Groups by `city_name` and counts the number of users in each city.
+
+**Output:**
+
+| city_name | total_users |
+| --- | --- |
+| Jhansi | 2 |
+| Indore | 1 |
+| Delhi | 1 |
+
+---
+
+### **Key Learnings:**
+
+1. **Table Creation:** Use `CREATE TABLE` with `PRIMARY KEY` and `FOREIGN KEY`.
+2. **Data Insertion:** Use `INSERT INTO` to add records.
+3. **Joining Tables:** Use `JOIN` to fetch related data from multiple tables.
+4. **Filtering Data:** Use `WHERE` to filter results based on conditions.
+5. **Sorting Data:** Use `ORDER BY` for sorting.
+6. **Limiting Results:** Use `LIMIT` and `OFFSET` to control result size.
+7. **Grouping & Counting:** Use `GROUP BY` with `COUNT()` to summarize data.

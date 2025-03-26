@@ -77,9 +77,7 @@ If a new row is inserted, the next ID will continue from the highest existing va
 8. Resetting Auto-Increment (Optional)
 If you want to reset the auto-increment counter after deleting rows:
 
-sql
-Copy
-Edit
+
 ALTER TABLE actors AUTO_INCREMENT = 5;
 This will make the next inserted row start from ID = 5, if it's not already occupied.
 

@@ -1,0 +1,98 @@
+Understanding Primary Key and Auto-Incrementation in SQL
+1. What is a Primary Key?
+A Primary Key (PK) is a unique identifier for each row in a table.
+
+It cannot contain NULL values and must be unique for every record.
+
+It helps in efficiently retrieving, updating, and managing records.
+
+2. What is Auto-Incrementation in SQL?
+Auto-incrementation allows MySQL to automatically generate a unique numeric value for a column.
+
+It is commonly used with the Primary Key to ensure each row has a unique identifier.
+
+The AUTO_INCREMENT keyword is used with an integer column.
+
+3. Creating a Table with an Auto-Incrementing Primary Key
+sql
+Copy
+Edit
+CREATE TABLE actors (
+    Firstname VARCHAR(20),
+    Lastname VARCHAR(20),
+    Gender VARCHAR(10),
+    Networth INT,
+    ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+Explanation:
+ID is the Primary Key, meaning it uniquely identifies each row.
+
+AUTO_INCREMENT ensures each new row gets a unique ID automatically.
+
+4. Inserting Data and Auto-Incrementation Behavior
+Inserting Data Without Specifying ID
+sql
+Copy
+Edit
+INSERT INTO actors (Firstname, Lastname, Gender, Networth) 
+VALUES ("Chris", "Evans", "Male", 600);
+Since ID is auto-incrementing, MySQL assigns the next available number.
+
+Manually Assigning an ID
+sql
+Copy
+Edit
+INSERT INTO actors (Firstname, Lastname, Gender, Networth, ID) 
+VALUES ("Chris", "Hemsworth", "Male", 800, 7);
+Here, ID = 7 is explicitly assigned, overriding auto-incrementation.
+
+5. Viewing the Table Data
+sql
+Copy
+Edit
+SELECT * FROM actors;
+Output Example:
+Firstname	Lastname	Gender	Networth	ID
+Chris	Evans	Male	600	1
+Chris	Hemsworth	Male	800	7
+Johnny	Depp	Male	500	8
+Observations:
+ID = 1 was auto-generated.
+
+ID = 7 was manually assigned.
+
+The next row got ID = 8, continuing from the highest ID, not 2.
+
+6. Deleting a Record and Its Effect on Auto-Increment
+sql
+Copy
+Edit
+DELETE FROM actors WHERE ID = 8;
+Updated Table Data:
+Firstname	Lastname	Gender	Networth	ID
+Chris	Evans	Male	600	1
+Chris	Hemsworth	Male	800	7
+Key Observations:
+Row with ID = 8 is removed.
+
+Auto-increment does not reuse deleted IDs!
+
+If a new row is inserted, the next ID will continue from the highest existing value +1, not from 8.
+
+7. Key Takeaways
+✅ Primary Keys must be unique and non-null.
+✅ Auto-incrementation ensures each row has a unique ID automatically.
+✅ Manually assigning an ID skips auto-generated numbers.
+✅ Auto-increment resumes from the highest existing ID, even if some are deleted.
+✅ Deleted IDs are not reused unless explicitly reset.
+
+8. Resetting Auto-Increment (Optional)
+If you want to reset the auto-increment counter after deleting rows:
+
+sql
+Copy
+Edit
+ALTER TABLE actors AUTO_INCREMENT = 5;
+This will make the next inserted row start from ID = 5, if it's not already occupied.
+
+This should now fully cover Primary Keys, Auto-Incrementation, and Deletion Effects in SQL

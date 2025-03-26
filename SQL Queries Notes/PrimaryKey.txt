@@ -14,7 +14,6 @@ It is commonly used with the Primary Key to ensure each row has a unique identif
 The AUTO_INCREMENT keyword is used with an integer column.
 
 3. Creating a Table with an Auto-Incrementing Primary Key
-sql
 CREATE TABLE actors (
     Firstname VARCHAR(20),
     Lastname VARCHAR(20),

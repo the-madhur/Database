@@ -54,9 +54,7 @@ ID = 7 was manually assigned.
 The next row got ID = 8, continuing from the highest ID, not 2.
 
 6. Deleting a Record and Its Effect on Auto-Increment
-sql
-Copy
-Edit
+
 DELETE FROM actors WHERE ID = 8;
 Updated Table Data:
 Firstname	Lastname	Gender	Networth	ID

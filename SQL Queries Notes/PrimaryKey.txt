@@ -33,9 +33,7 @@ VALUES ("Chris", "Evans", "Male", 600);
 Since ID is auto-incrementing, MySQL assigns the next available number.
 
 Manually Assigning an ID
-sql
-Copy
-Edit
+
 INSERT INTO actors (Firstname, Lastname, Gender, Networth, ID) 
 VALUES ("Chris", "Hemsworth", "Male", 800, 7);
 Here, ID = 7 is explicitly assigned, overriding auto-incrementation.

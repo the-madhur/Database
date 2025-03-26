@@ -39,9 +39,7 @@ VALUES ("Chris", "Hemsworth", "Male", 800, 7);
 Here, ID = 7 is explicitly assigned, overriding auto-incrementation.
 
 5. Viewing the Table Data
-sql
-Copy
-Edit
+
 SELECT * FROM actors;
 Output Example:
 Firstname	Lastname	Gender	Networth	ID

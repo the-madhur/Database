@@ -15,8 +15,6 @@ The AUTO_INCREMENT keyword is used with an integer column.
 
 3. Creating a Table with an Auto-Incrementing Primary Key
 sql
-Copy
-Edit
 CREATE TABLE actors (
     Firstname VARCHAR(20),
     Lastname VARCHAR(20),

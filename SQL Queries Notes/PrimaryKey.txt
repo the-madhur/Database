@@ -30,7 +30,7 @@ AUTO_INCREMENT ensures each new row gets a unique ID automatically.
 Inserting Data Without Specifying ID
 sql
 Copy
-Edit
+
 INSERT INTO actors (Firstname, Lastname, Gender, Networth) 
 VALUES ("Chris", "Evans", "Male", 600);
 Since ID is auto-incrementing, MySQL assigns the next available number.

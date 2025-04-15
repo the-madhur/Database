@@ -30,9 +30,7 @@ WHERE ensures only the specific row is updated.
 Without WHERE, all rows would be updated.
 
 1. View Updated Table
-sql
-Copy
-Edit
+
 SELECT * FROM workers;
 Explanation:
 This command is used again to confirm that the joining_date column was successfully updated with the new values.

@@ -46,9 +46,7 @@ Once a column is dropped, all data in it is lost.
 Use this carefully, especially in real projects.
 
 1. Verify Table After Column Deletion
-sql
-Copy
-Edit
+
 SELECT * FROM workers;
 Explanation:
 Used to confirm that the joining_date column has been removed and the table structure is back to the original state.

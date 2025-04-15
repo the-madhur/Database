@@ -17,9 +17,7 @@ This command retrieves all columns and rows from the workers table.
 It is used to verify that the column was successfully added and to view current data.
 
 1. Update Data in a Table
-sql
-Copy
-Edit
+
 UPDATE workers SET joining_date = '2021-02-11' WHERE workers_id = 1;
 UPDATE workers SET joining_date = '2020-03-10' WHERE workers_id = 2;
 UPDATE workers SET joining_date = '2010-04-20' WHERE workers_id = 3;
@@ -31,7 +29,7 @@ SET is used to assign a new value to a column.
 WHERE ensures only the specific row is updated.
 Without WHERE, all rows would be updated.
 
-4. View Updated Table
+1. View Updated Table
 sql
 Copy
 Edit
@@ -39,7 +37,7 @@ SELECT * FROM workers;
 Explanation:
 This command is used again to confirm that the joining_date column was successfully updated with the new values.
 
-5. Remove a Column from a Table
+1. Remove a Column from a Table
 sql
 Copy
 Edit

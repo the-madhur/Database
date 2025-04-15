@@ -10,15 +10,13 @@ DATETIME is a data type used to store both date and time (e.g., 2021-02-11 00:00
 Initially, all existing rows will have NULL in the new column because no values are set yet.
 
 2. View Table Data
-sql
-Copy
-Edit
+
 SELECT * FROM workers;
 Explanation:
 This command retrieves all columns and rows from the workers table.
 It is used to verify that the column was successfully added and to view current data.
 
-3. Update Data in a Table
+1. Update Data in a Table
 sql
 Copy
 Edit

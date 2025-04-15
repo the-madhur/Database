@@ -36,9 +36,7 @@ Explanation:
 This command is used again to confirm that the joining_date column was successfully updated with the new values.
 
 1. Remove a Column from a Table
-sql
-Copy
-Edit
+
 ALTER TABLE workers DROP joining_date;
 Explanation:
 This command removes the joining_date column from the table permanently.
@@ -47,7 +45,7 @@ Once a column is dropped, all data in it is lost.
 
 Use this carefully, especially in real projects.
 
-6. Verify Table After Column Deletion
+1. Verify Table After Column Deletion
 sql
 Copy
 Edit

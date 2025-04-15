@@ -12,6 +12,7 @@ Initially, all existing rows will have NULL in the new column because no values 
 2. View Table Data
 
 SELECT * FROM workers;
+
 Explanation:
 This command retrieves all columns and rows from the workers table.
 It is used to verify that the column was successfully added and to view current data.
@@ -54,7 +55,7 @@ Used to confirm that the joining_date column has been removed and the table stru
 ✅ Summary of Concepts Practiced
 
 Command	Purpose
-ALTER TABLE ADD	Add a new column
-UPDATE	Change values in specific rows
-SELECT *	View entire table
-ALTER TABLE DROP	Remove a column from the table
+ALTER TABLE ADD	  ->   Add a new column
+UPDATE	          ->   Change values in specific rows
+SELECT *	      ->   View entire table
+ALTER TABLE DROP  ->   Remove a column from the table
